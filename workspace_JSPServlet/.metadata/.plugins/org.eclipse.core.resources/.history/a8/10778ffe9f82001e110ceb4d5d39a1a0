@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+
+<table border="1" width="90%">
+  <tr>
+    <td align="center">Column 1 Heading</td>
+    <td align="center">Column 2 Heading</td>
+    <td align="center">Column 3 Heading</td>
+  </tr>
+</table>

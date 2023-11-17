@@ -1,0 +1,18 @@
+package kr.co.himedia.stream06;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class DataStreamTest {
+
+	public static void main(String[] args) {
+		
+		try(FileOutputStream fos = new FileOutputStream("data.txt");
+				DataOutputStream dos = new DataOutputStream(fos)) {
+			
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}

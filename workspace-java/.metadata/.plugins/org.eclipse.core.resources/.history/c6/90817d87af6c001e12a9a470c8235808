@@ -1,0 +1,18 @@
+package kr.co.himedia.stream;
+
+import java.util.Arrays;
+
+public class IntArrayStreamTest {
+
+	public static void main(String[] args) {
+		
+		int[] arr = {1, 2, 3, 4, 5};
+		
+		for(int a : arr)
+			System.out.print(a + "\t");
+		System.out.println();
+		
+		Arrays.stream(arr).forEach(n -> System.out.print(n + "\t"));
+		
+	}
+}

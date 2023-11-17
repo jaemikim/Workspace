@@ -1,0 +1,17 @@
+package kr.co.himedia.stream07;
+
+public class CoffeeTest {
+
+	public static void main(String[] args) {
+		
+		Coffee kenyaAmericano = new KeyaAmericano();
+		kenyaAmericano.brewing();
+		System.out.println();
+		
+		Coffee kenyaLatte = new Latte(kenyaAmericano);
+		kenyaLatte.brewing();
+		
+		Coffee kenyMocha = new Moche(new Latte(kenyaAmericano));
+		
+	}
+}

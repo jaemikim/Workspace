@@ -1,0 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+	String chkVal = request.getParameter("noToday"); 		/*noToday 매개변수의 값 얻기*/
+	if(chkVal != null && chkVal.equals("1")) { 				/* 값이 "1"이면 */
+		Cookie cookie = new Cookie();
+	}
+%>

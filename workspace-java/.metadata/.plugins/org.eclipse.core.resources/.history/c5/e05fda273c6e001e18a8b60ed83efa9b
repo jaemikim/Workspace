@@ -1,0 +1,8 @@
+package kr.co.himedia.stream04;
+
+public class FileInputOutputStreamTest {
+
+	public static void main(String[] args) {
+		
+	}
+}

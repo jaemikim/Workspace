@@ -1,0 +1,12 @@
+package kr.co.himedia.thread;
+
+/*
+ * 20미만 짝수 출력(0, 2, 4, ~ 18)
+ * 10미만 수 출력 (9~1)
+ */
+public class MultiThreadTest {
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>게시판_모델1방식</title>
+</head>
+<body>
+	<jsp:include page="./common/headerLink.jsp" />  <!-- 공통 링크 -->
+	<h2>게시글 목록 보기</h2>
+	<!-- 검색폼 -->
+	<form action="">
+	</form>
+	
+	<!-- 게시물 목록(표) -->
+	<table>
+	
+	</table>
+</body>
+</html>

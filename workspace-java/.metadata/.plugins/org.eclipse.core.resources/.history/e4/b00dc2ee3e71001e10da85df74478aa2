@@ -1,0 +1,25 @@
+package kr.co.himedia.thread02;
+
+class PriorityThread2 extends Thread {
+	@Override
+	public void run() {
+		int sum = 0;
+		
+		Thread thread = Thread.currentThread();
+		System.out.println(thread + "start");
+		
+		for(int i = 0; i <= 1000000; i++)
+			sum += i;
+		
+		System.out.println(thread.getPriority() + " end");
+	}
+}
+public class PriorityTest02 {
+
+	public static void main(String[] args) {
+		
+		PriorityTest02 pt1 = new PriorityThread2();
+		PriorityTest02 pt2 = new PriorityThread2();
+		PriorityTest02 pt3 = new PriorityThread2();
+	}
+}

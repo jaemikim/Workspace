@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Movie.java&apos; to &apos;Chap18(Collection Framework)/src/kr.co.himedia.list&apos;&#x0D;&#x0A;- Original project: &apos;Chap17(제너릭)&apos;&#x0D;&#x0A;- Destination element: &apos;Chap18(Collection Framework)/src/kr.co.himedia.list&apos;&#x0D;&#x0A;- Original element: &apos;kr.co.himedia.generic04.Movie.java&apos;" description="Copy compilation unit" destination="=Chap18\(Collection Framework)/src&lt;kr.co.himedia.list" element1="/src&lt;kr.co.himedia.generic04{Movie.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1697087727794" units="1" version="1.0"/>
+</session>

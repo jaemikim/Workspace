@@ -1,0 +1,29 @@
+package kr.co.himedia.stream06;
+
+class Person{
+	private String name;
+	private String job;
+	
+	public Person() {}
+
+	public Person(String name, String job) {
+//		super();
+		this.name = name;
+		this.job = job;
+	}
+
+	@Override
+	public String toString() {
+		return name + ", " + job;
+	}	
+}
+public class SerializationTest {
+
+	public static void main(String[] args) {
+		
+		Person personL = new Person("이순신", "대표이사");
+		Person personK = new Person("김유신", "상무이사");
+		
+		
+	}
+}

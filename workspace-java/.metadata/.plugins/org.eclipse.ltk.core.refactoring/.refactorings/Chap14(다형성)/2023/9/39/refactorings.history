@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;kr.co.himedia.inheritance03&apos; to &apos;kr.co.himedia.inheritance04&apos;&#x0D;&#x0A;- Original project: &apos;Chap14(다형성)&apos;&#x0D;&#x0A;- Original element: &apos;Chap14(다형성)/src/kr.co.himedia.inheritance03&apos;&#x0D;&#x0A;- Renamed element: &apos;Chap14(다형성)/src/kr.co.himedia.inheritance04&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;kr.co.himedia.inheritance03&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;kr.co.himedia.inheritance03" name="kr.co.himedia.inheritance04" qualified="false" references="true" stamp="1695706366079" textual="false" version="1.0"/>
+</session>

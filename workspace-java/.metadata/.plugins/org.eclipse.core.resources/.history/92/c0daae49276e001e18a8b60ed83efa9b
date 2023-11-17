@@ -1,0 +1,28 @@
+package kr.co.himedia.stream02;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class FileInputStreamTest3 {
+
+	public static void main(String[] args) {
+		
+//		FileInputStream fis = null;
+		
+		try(FileInputStream fis = new FileInputStream("input0.txt");) {
+			
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			System.out.println((char)fis.read());
+			
+		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+			System.out.println(e.getMessage());
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		
+		System.out.println(" end");
+	}
+}

@@ -1,0 +1,32 @@
+package kr.co.himedia.exception02;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class ThrowsTest {
+
+	public Class loadClass(String fileName, String ClassName) throws FileNotFoundException, ClassNotFoundException {
+		FileInputStream fis = new FileInputStream(fileName);
+		Class clazz = Class.forName(ClassName);
+		
+		return clazz;
+	}
+	
+	public static void main(String[] args) {
+		
+		ThrowsTest test = new ThrowsTest();
+		
+		try {
+			test.loadClass("a.txt", "java.lang.String");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("Exception : " + e.getMessage());
+		}
+		System.out.println("end");
+	}
+}

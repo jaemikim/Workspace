@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="EUC-KR">
+  <title>Cookie</title>
+</head>
+<body>
+	<h1>쿠키 설정</h1>
+	<%
+		Cookie cookie = new Cookie("myCookie", "빼빼로 데이 호객님");
+	%>
+</body>
+</html>

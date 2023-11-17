@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="kr.co.himedia.common.PersonDTO"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.jsp.JspWriter"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.Cookie"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="kr.co.himedia.login.JDBConnection"/>
+    <fullyQualifiedTypeName name="kr.co.himedia.login.MemberDAO"/>
+    <fullyQualifiedTypeName name="kr.co.himedia.login.MemberDTO"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="kr.co.himedia.board.JDBConnection"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletContext"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="kr.co.himedia.board.BoardDAO"/>
+    <fullyQualifiedTypeName name="kr.co.himedia.board.BoardDTO"/>
+</qualifiedTypeNameHistroy>

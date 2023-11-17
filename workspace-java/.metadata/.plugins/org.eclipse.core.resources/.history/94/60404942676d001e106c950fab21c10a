@@ -1,0 +1,20 @@
+package kr.co.himedia.exception;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class FileExceptionTest {
+
+	public static void main(String[] args) {
+		
+		FileInputStream fis = null;
+		
+		try {
+			fis = new FileInputStream("himedi.txt");  // FileInputStream 생성자
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} 
+		
+		System.out.println("여기도 정상 수행됩니다.");
+	}
+}

@@ -1,0 +1,21 @@
+package kr.co.himedia.board;
+
+import java.util.Map;
+
+import jakarta.servlet.ServletContext;
+
+public class BoardDAO extends JDBConnection {
+
+	public BoardDAO(ServletContext application) {
+		super(application);
+	}
+	
+	// 검색 조건에 맞는 게시물 갯수 반환
+	public int selectCount(Map<String, Object> map) {
+		int totalCount = 0;   //게시물 수를 담을 변수
+		
+		
+		
+		return totalCount;
+	}
+}

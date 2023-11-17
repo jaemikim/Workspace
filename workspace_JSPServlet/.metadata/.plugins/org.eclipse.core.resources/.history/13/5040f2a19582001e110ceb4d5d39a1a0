@@ -1,0 +1,18 @@
+package kr.co.himedia.login;
+
+public class MemberDAO extends JDBConnection{
+
+	//crud만 생각한다.
+	public MemberDAO (String driver, String url, String id, String pwd) {
+		super(driver, url, id, pwd);
+	}
+	
+	// 입력한 아이디/패스워드와 일치하는 회원 정보를 체크
+	public MemberDTO getMemberDTO(String uid, String upass) {
+		MemberDTO dto = new MemberDTO();
+		
+		
+		
+		return dto;
+	}
+}
