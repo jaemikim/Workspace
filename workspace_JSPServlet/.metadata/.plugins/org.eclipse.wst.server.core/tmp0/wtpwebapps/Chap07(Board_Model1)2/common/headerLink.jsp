@@ -19,6 +19,7 @@
     </td>
         
     <td align="center"><a href="../board/list.jsp">게시판</a></td>
-    <td align="center">게시판(페이징)</td>
+    <td align="center"><a href="../board_paging/list.jsp">게시판(페이징)</a></td>
+
   </tr>
 </table>

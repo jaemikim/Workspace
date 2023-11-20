@@ -17,13 +17,13 @@
 	
 	//DAO객체 생성해서 DB에 DTO 저장
 	BoardDAO dao = new BoardDAO(application);
-	//int iResult = dao.insertBoard(dto);
+	int iResult = dao.insertBoard(dto);
 	
-	int iResult = 0;      // dummy 테이블 생성
-	for (int i = 1; i <= 100; i++) {
-		dto.setTitle(title + " - " + i);
-		iResult = dao.insertBoard(dto);
-	}
+	//int iResult = 0;      // dummy 테이블 생성
+	//for (int i = 1; i <= 100; i++) {
+	//	dto.setTitle(title + " - " + i);
+	//	iResult = dao.insertBoard(dto);
+	//}
 	
 	dao.close();
 	

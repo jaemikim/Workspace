@@ -1,3 +1,4 @@
+<%@page import="kr.co.himedia.common.BoardPage"%>
 <%@page import="kr.co.himedia.board.BoardDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.HashMap"%>
@@ -33,13 +34,13 @@
 	int pageNum = 1;
 	String pageTemp = request.getParameter("pageNum");	
 	// 요청 받은 페이지로 수정
-	if(pageTemp != null && pageTemp.equals(""))
+	if(pageTemp != null && !pageTemp.equals(""))
 		pageNum = Integer.parseInt(pageTemp);
 	
 	// 목록에 출력한 게시물 범위 계산
 	// 첫 게시물 번호 : (현재페이지 -1) * POSTS_PER_PAGE + 1
 	int start = (pageNum - 1) * pageSize + 1;
-	// 마지막 게시물 번호 :
+	// 마지막 게시물 번호 : (현재페이지 * POSTS_PER_PAGE) 
 	int end = pageNum * pageSize;
 	
 	param.put("start", start);
@@ -56,7 +57,7 @@
 </head>
 <body>
 	<jsp:include page="../common/headerLink.jsp" />  <!-- 공통 링크 -->
-	<h2>게시글 목록 보기</h2>
+	<h2>게시글 목록 보기 - 현재 페이지 :<%=pageNum %>(전체 : <%=totalPage %>)</h2>
 	<!-- 검색폼 -->
 	<form action="" method = "get">
 		<table border = "1" width = "90%">
@@ -95,9 +96,11 @@
 			} else {
 		   		// 게시물이 있을 때
 		   		int virtualNum = 0;    // 화면상에서의 게시물 번호
+		   		int countNum = 0;
 		   		for (BoardDTO dto : boardLists) {
 		   			
-		   			virtualNum = totalCount--;  // 전체 검색된 게시물 수에서 1씩 감소
+		   			//virtualNum = totalCount--;  // 전체 검색된 게시물 수에서 1씩 감소
+		   			virtualNum = totalCount - (((pageNum-1)*pageSize) + countNum++);
 		  %>
 		  		<tr align="center">
 		  			<td><%=virtualNum %></td>  <!-- 게시물 번호 -->
@@ -112,11 +115,14 @@
 		   		}
 			}
 		%>		
-
+		
 	</table>
 	<!-- 글쓰기 버튼 -->
 	<table border ="1" width="90%">
-		<tr align="right">
+		<tr align="center">
+			<td>
+				<%= BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, request.getRequestURI()) %>
+			</td>
 			<td><button type="button" onclick="location.href='write.jsp';">글쓰기</button></td>
 		</tr>
 	</table>

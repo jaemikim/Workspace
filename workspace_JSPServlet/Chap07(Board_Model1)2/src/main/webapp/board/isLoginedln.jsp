@@ -1,4 +1,4 @@
-<%@page import="kr.co.himedia.board.JSFunction"%>
+<%@page import="kr.co.himedia.common.JSFunction"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

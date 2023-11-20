@@ -19,12 +19,12 @@ D:\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\22
 \Chap02(JSP)\src\main\java
 D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2796102826.index
 \Chap07(Board_Model1)2\src\main\java
-D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3257721504.index
-\Chap03(JSP)\src\main\java
-D:\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2690794266.index
-\Chap02(JSP)\src\main\java
 D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1219300854.index
 \Chap02(JSP)\src\main\java
+D:\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2690794266.index
+\Chap02(JSP)\src\main\java
+D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3257721504.index
+\Chap03(JSP)\src\main\java
 D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2033461742.index
 \Chap03(JSP)\src\main\java
 D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2690331746.index
@@ -43,6 +43,8 @@ D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\js
 \Chap07(Board_Model1)\src\main\java
 D:\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\355747245.index
 \Chap01(?„œë¸”ë¦¿)\src\main\java
+D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3287456103.index
+\Chap08(EL)\src\main\java
 D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3282297216.index
 \Chap06(ActionTag)\src\main\java
 D:\workspace\workspace_JSPServlet\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\822189703.index
