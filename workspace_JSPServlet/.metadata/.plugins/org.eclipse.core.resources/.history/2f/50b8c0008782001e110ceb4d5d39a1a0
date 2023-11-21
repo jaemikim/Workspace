@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/JSPServlet-config" deployDir="wtpwebapps" hostname="localhost" id="JSPServlet" name="JSPServlet" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="10">
-  <list key="modules" value0="Chap01(서블릿)::org.eclipse.jst.jee.server:Chap01(서블릿)::jst.web::6.0" value1="Chap03(JSP)::org.eclipse.jst.jee.server:Chap03(JSP)::jst.web::6.0" value2="Chap02(JSP)::org.eclipse.jst.jee.server:Chap02(JSP)::jst.web::6.0" value3="Chap04(JSP)::org.eclipse.jst.jee.server:Chap04(JSP)::jst.web::6.0"/>
-</server>
