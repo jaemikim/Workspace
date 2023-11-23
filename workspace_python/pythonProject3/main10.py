@@ -3,6 +3,15 @@ for i in range(5):
         print("*", end="")
     print("")
 
+print("-" * 20)
+
+for y in range(1, 6):
+    for x in range(y):
+        print("*", end="")
+    print("")
+
+print("-" * 20)
+
 for i in range(5):
     for j in range(i+1):
         print("*", end="")

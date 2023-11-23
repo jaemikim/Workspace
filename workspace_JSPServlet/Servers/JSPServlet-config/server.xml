@@ -143,7 +143,7 @@
 
       
       
-      <Context docBase="Chap09(JSTL)" path="/Chap09" reloadable="true" source="org.eclipse.jst.jee.server:Chap09(JSTL)"/></Host>
+      <Context docBase="Chap10(Servlet)" path="/Chap10" reloadable="true" source="org.eclipse.jst.jee.server:Chap10(Servlet)"/><Context docBase="Chap11(FileUD)" path="/Chap11" reloadable="true" source="org.eclipse.jst.jee.server:Chap11(FileUD)"/></Host>
     </Engine>
   </Service>
 </Server>
