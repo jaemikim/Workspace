@@ -1,6 +1,8 @@
 package ko.co.himedia.fileupload;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  * INSERT INTO HM.HIFILE (ID, TITLE, CATEGORY, OFILE, SFILE)
@@ -31,5 +33,35 @@ public class HiFileDAO extends DBConnPool{
 		}
 		
 		return result;
+	}
+	
+	public List<HiFileDTO> hifileList() {
+		List<HiFileDTO> fileList = new ArrayList<>();
+		
+		String query = "SELECT * FROM HIFILE ORDER BY id DESC";
+		
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(query);
+			
+			while(rs.next()) {
+				HiFileDTO dto = new HiFileDTO();
+				dto.setId(rs.getString(1));
+				dto.setTitle(rs.getString(2));
+				dto.setCategory(rs.getString(3));
+				dto.setOfile(rs.getString(4));
+				dto.setSfile(rs.getString(5));
+				dto.setPostdate(rs.getString(6));
+				
+				fileList.add(dto);
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("SELECT 시 예외 발생");
+			e.printStackTrace();
+		}
+		
+		
+		return fileList;
 	}
 }

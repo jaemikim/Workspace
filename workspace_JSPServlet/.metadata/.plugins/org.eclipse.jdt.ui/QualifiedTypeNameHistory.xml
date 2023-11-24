@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="kr.co.himedia.common.PersonDTO"/>
     <fullyQualifiedTypeName name="jakarta.servlet.jsp.JspWriter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.Cookie"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="kr.co.himedia.login.JDBConnection"/>
     <fullyQualifiedTypeName name="kr.co.himedia.login.MemberDAO"/>
@@ -13,15 +12,25 @@
     <fullyQualifiedTypeName name="kr.co.himedia.board.JDBConnection"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletContext"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="kr.co.himedia.board.BoardDAO"/>
     <fullyQualifiedTypeName name="kr.co.himedia.board.BoardDTO"/>
     <fullyQualifiedTypeName name="jakarta.annotation.PostConstruct"/>
     <fullyQualifiedTypeName name="jakarta.annotation.PreDestroy"/>
     <fullyQualifiedTypeName name="ko.co.himedia.fileupload.DBConnPool"/>
-    <fullyQualifiedTypeName name="ko.co.himedia.fileupload.HiFileDTO"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.MultipartConfig"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
+    <fullyQualifiedTypeName name="java.nio.file.SecureDirectoryStream"/>
+    <fullyQualifiedTypeName name="ko.co.himedia.fileupload.FileUtility"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="ko.co.himedia.fileupload.HiFileDAO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ko.co.himedia.fileupload.HiFileDTO"/>
 </qualifiedTypeNameHistroy>
