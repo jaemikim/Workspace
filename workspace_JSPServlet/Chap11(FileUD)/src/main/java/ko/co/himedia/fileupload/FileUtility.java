@@ -3,10 +3,14 @@ package ko.co.himedia.fileupload;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
 import jakarta.servlet.ServletException;
+
 import jakarta.servlet.http.HttpServletRequest;
+
 import jakarta.servlet.http.Part;
 
 public class FileUtility {
@@ -55,5 +59,45 @@ public class FileUtility {
 				
 		//변경된 파일명
 		return newFileName;
-	}	
+	}
+
+	//multiple 속성 추가로 2개 이상의 파일 업로드 
+	public static ArrayList<String> multipleFile(HttpServletRequest request, String saveDirectory) throws IOException, ServletException {
+		
+		//파일명 저장을 위한 컬렉션 생성
+				ArrayList<String> listFileName = new ArrayList<>();
+				
+				//Part 객체를 통해 서버로 전송된 파일명 읽어오기
+				Collection<Part> parts = request.getParts();
+				for (Part part : parts) {
+					// 파일일 아니라면 업로드의 대상이 아니므로 무시
+					if(!part.getName().equals("ofile")) 
+						continue;
+					
+					// Part 객체의 해더값 중 content-disposition 읽어오기
+					String partHeader = part.getHeader("content-disposition");
+					System.out.println("partHeader" + partHeader);
+					
+					/*
+					partHeader = form-data; name="ofile"; filename="puppy(1).jpg"
+					partHeader = form-data; name="ofile"; filename="cat(1).png"
+					partHeader = form-data; name="ofile"; filename="cat.png"
+					 */
+					
+					//헤더 값에서 파일명 잘라내기
+					String[] phArr = partHeader.split("filename=");
+					String originalFileName = phArr[1].trim().replace("\"", "");
+					
+					if (!originalFileName.isEmpty())
+						part.write(saveDirectory + File.separator+ originalFileName);
+					
+					//컬렉션에 추가
+					listFileName.add(originalFileName);
+				}
+					
+				return listFileName;
+	}
+
+	
+	
 }
