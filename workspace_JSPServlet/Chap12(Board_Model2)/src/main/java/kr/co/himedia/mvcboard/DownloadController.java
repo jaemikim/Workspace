@@ -22,5 +22,10 @@ public class DownloadController extends HttpServlet {
 		
 		// 파일 다운로드
 		FileUtility.download(request, response, "/Uploads", sfile, ofile);
-	}
+		
+		//해당 게시물의 다운로드 수 1 증가
+		MvcBoardDAO dao = new MvcBoardDAO();
+		dao.downloadCount(id);
+		dao.close()
+;	}
 }

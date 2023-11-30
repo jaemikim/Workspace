@@ -164,6 +164,13 @@ public class FileUtility {
 		}
 	}
 
+	public static void deleteFile(HttpServletRequest request, String directory, String fileName) {
+		String sdirectory = request.getServletContext().getRealPath(directory);
+		File file = new File(sdirectory + File.separator + fileName);
+		if(file.exists())
+			file.delete();
+	}
+
 	
 	
 }

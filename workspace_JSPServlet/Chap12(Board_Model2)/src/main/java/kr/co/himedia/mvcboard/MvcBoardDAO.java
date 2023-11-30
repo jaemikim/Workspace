@@ -166,4 +166,92 @@ public class MvcBoardDAO extends DBConnPool {     // 커넥션 풀 상속
 			e.printStackTrace();
 		}
 	}
+	
+	// 다은로드 횟수 1 증가시킴
+	public void downloadCount(String id) {
+		String sql = "UPDATE MVCBOARD SET DOWUNCOUNT = DOWUNCOUNT  + 1 WHERE ID  = ?";
+		
+		try {
+			psmt = con.prepareStatement(sql);
+			psmt.setString(1, id);
+			psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			System.out.println("다운로드 횟수 증가 중 오류 발생");
+			e.printStackTrace();
+		}		
+	}
+	//입력한 비밀번호가 선택된 게시물의 비밀번호아 일치하는지 확인
+	public boolean confirmPassword(String pass, String id) {
+		boolean result = true;
+		
+		String sql = "SELECT COUNT(*) FROM MVCBOARD WHERE pass = ? AND id = ?";
+		
+		try {
+			psmt = con.prepareStatement(sql);
+			psmt.setString(1, pass);
+			psmt.setString(2, id);
+			rs = psmt.executeQuery();
+			
+			rs.next();
+			if(rs.getInt(1) == 0)
+				result = false;
+			
+		} catch (SQLException e) {
+			System.out.println("비밀번호 일치 체크 중 오류 발생");
+			result = false;
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	//선택된 게시물 삭제하기 
+	public int deleteBoard(String id) {
+		int result = 0;
+		
+		String sql = "DELETE FROM MVCBOARD WHERE id = ?";
+		
+		try {
+			psmt = con.prepareStatement(sql);
+			psmt.setString(1, id);
+			result = psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			System.out.println("게시물 삭제 중 예외 발생");
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+
+	// 게시글 데이터를 받아 DB에 저장되어 있던 내용을 업데이트하기 (파일 업르도 지원)
+	public int updateBoard(MvcBoardDTO dto) {
+		int result = 0;
+		
+		//쿼리문 템플릿 준비
+		String query = "UPDATE HM.MVCBOARD SET TITLE=?, NAME=?,  CONTENT=?, OFILE=?, SFILE=? "
+					+ "WHERE ID = ? AND pass = ?";
+		
+		// 쿼리문 준비
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, dto.getTitle());
+			psmt.setString(2, dto.getName());
+			psmt.setString(3, dto.getContent());
+			psmt.setString(4, dto.getOfile());
+			psmt.setString(5, dto.getSfile());
+			psmt.setString(6, dto.getId());
+			psmt.setString(7, dto.getPass());
+			
+			//쿼리문 실행
+			result  = psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			System.out.println("게시물 수정중 예외 발생");
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
 }
