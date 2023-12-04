@@ -143,7 +143,7 @@
 
       
       
-      <Context docBase="Chap12(Board_Model2)" path="/Chap12" reloadable="true" source="org.eclipse.jst.jee.server:Chap12(Board_Model2)"/></Host>
+      <Context docBase="MvcBoard(김정자)" path="/MvcBoard" reloadable="true" source="org.eclipse.jst.jee.server:MvcBoard(김정자)"/></Host>
     </Engine>
   </Service>
 </Server>
