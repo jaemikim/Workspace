@@ -72,8 +72,8 @@
 			
 			<div>
 				<label> <input type="checkbox" name="rememberId" /> 아이디 기억</label>
-				<a href="">비밀번호찾기</a>
-				<a href="">회원가입</a>
+				<a href="">| 비밀번호찾기</a>
+				<a href="">| 회원가입</a>
 			</div>	
 	</form>
 	<script type="text/javascript">
