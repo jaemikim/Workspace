@@ -6,6 +6,7 @@ import java.net.URLEncoder;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +23,7 @@ public class LoginController {
 	}
 	
 	@PostMapping("/login")
-	public String login(String id, String pwd, boolean rememberId, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+	public String login(String id, String pwd, boolean rememberId, String toURL, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 	
 //		System.out.println("id = " + id);
 //		System.out.println("pwd = " + pwd);
@@ -47,11 +48,29 @@ public class LoginController {
 				cookie.setMaxAge(0);
 				response.addCookie(cookie);
 			}
-		return "redirect:/";
+			
+		// 3. 세션
+		// 세션 객체 얻어오기
+		HttpSession session = request.getSession();
+		// 세션 객체를 id에 저장
+		session.setAttribute("id", id);
+		
+		// 4. 뷰 이동
+		toURL = toURL == null  || toURL.equals("") ? "/" : toURL;
+		
+			
+		return "redirect:" + toURL;
 	}
 
 	private boolean loginCheck(String id, String pwd) {
 		return "hm".equals(id) && "0305".equals(pwd);
 	}
-	 
+	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		// 세션을 종료
+		session.invalidate();
+		// 홈으로 이동
+		return "redirect:/";
+	}
 }

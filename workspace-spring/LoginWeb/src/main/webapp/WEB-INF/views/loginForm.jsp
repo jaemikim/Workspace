@@ -63,11 +63,12 @@
 		<h3 id="title">Login</h3>
 		<div id="msg">
 			<c:if test="${not empty param.msg }">
-				<i class ="fa fa-exlamation-circle">${URLDecoder.decode(param.msg) }</i>
+				<i class ="fa fa-exclamation-circle">${URLDecoder.decode(param.msg) }</i>
 			</c:if>
 		</div>	
 			<input type="text" name="id" placeholder="이메일 입력" value="${cookie.id.value }" autofocus />
 			<input type="password" name="pwd" placeholder="비밀번호" />
+			<input type="hidden" name="toURL" value="${param.toURL }" />
 			<button>로그인</button>
 			
 			<div>
@@ -81,12 +82,12 @@
 			let msg = ''
 			
 			if(frm.id.value.length == 0) {
-				setMessage("id를 입력하세요", frm.id)
+				setMessage('id를 입력하세요', frm.id)
 				return false;
 			}
 			
 			if(frm.pwd.value.length == 0) {
-				setMessage("password를 입력해주세요.", frm.pwd)
+				setMessage('password를 입력해주세요.', frm.pwd)
 				return false;
 			}
 			
@@ -94,7 +95,7 @@
 		}
 		
 		function setMessage(msg, element) {
-			document.getElementById("msg").innerHTML = `<i class="fa fa-exlamation-circle">${'${msg}'}</i>`
+			document.getElementById("msg").innerHTML = `<i class="fa fa-exclamation-circle">${'${msg}'}</i>`
 			if (element)
 				element.select()    /* 값을 잘못 입력되어을 때 그 요소를 선택되게 하는 것 */
 		}
