@@ -18,7 +18,7 @@ import com.google.common.reflect.ClassPath;
 class Engine {}
 
 class AppContext {
-	Map map;    //객체 저장송
+	Map map;    //객체 저장소
 	
 	public AppContext() {
 		map = new HashMap();
@@ -60,8 +60,8 @@ class AppContext {
 public class DIMimic03 {
 	public static void main(String[] args) {
 		AppContext ac = new AppContext();
-		Car car = (Car)ac.getBean("car");
-		Engine engine = (Engine) ac.getBean("engine");
+		Car car = (Car)ac.getBean("car");  
+		Engine engine = (Engine) ac.getBean("engine");  
 		
 		System.out.println("car = " + car);
 		System.out.println("engine = " + engine);

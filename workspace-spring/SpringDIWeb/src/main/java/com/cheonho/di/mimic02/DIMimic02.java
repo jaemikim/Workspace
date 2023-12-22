@@ -42,8 +42,8 @@ public class DIMimic02 {
 
 	public static void main(String[] args) {
 		AppContext ac = new AppContext();
-		Car car = (Car)ac.getBean("car");
-		Engine engine = (Engine)ac.getBean("engine");
+		Car car = (Car)ac.getBean("car");						// 객체 찾기 - by Name (이름 - id으로 찾기)
+		Engine engine = (Engine)ac.getBean("engine");			// 객체 찾기 - by Name (이름 - id으로 찾기)
 		
 		System.out.println("car = " + car);
 		System.out.println("engine = " + engine);

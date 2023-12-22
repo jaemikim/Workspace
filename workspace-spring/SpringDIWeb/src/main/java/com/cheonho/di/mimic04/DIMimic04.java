@@ -18,7 +18,7 @@ import com.google.common.reflect.ClassPath;
 class Engine {}
 
 class AppContext {
-	Map map;    //객체 저장송
+	Map map;    //객체 저장소
 	
 	public AppContext() {
 		map = new HashMap();
